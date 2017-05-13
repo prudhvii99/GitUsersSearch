@@ -1,0 +1,52 @@
+<!doctype html>
+<html ng-app="myModule">
+	<head>
+		<title>Assesment</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    	<script src="script.js"></script>
+	</head>
+
+	<body ng-controller="myCntrl"><br>
+
+    <h1> Mayank Interview Assesment </h1> <br>
+        <div>
+            Find GIT User: <input type="text" ng-model="name" placeholder="Enter Username">
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" ng-click='clickme()'>Click</button>
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">User Details</h4>
+        </div>
+        <div class="modal-body">
+          <div>
+            Name: {{users.login}} <br />
+            Id: {{users.id}} <br />
+            User Type: {{users.type}} <br />
+            Location : {{users.location}} <br />
+            Image: <img src="{{users.avatar_url}}" style="width:42px;height:42px;border:0;"> <br />
+             <a  href={{users.html_url}} target="_blank">GIT Url</a> <br />
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+<!--  </div>-->
+  
+</div>
+        </div>
+        
+        
+        
+        
+	</body>
+</html>
